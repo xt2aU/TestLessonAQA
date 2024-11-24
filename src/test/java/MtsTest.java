@@ -46,6 +46,7 @@ public class MtsTest {
     //Проверка наличия раздела "Онлайн пополнение без комиссии"
     @Test
     @DisplayName("Check title Payment Section")
+    @Step
     public void checkTitlePaymentSection() {
         assertTrue(mtsHomePage.isTitlePaymentDisplayed());
     }
@@ -53,6 +54,7 @@ public class MtsTest {
     //Проверка иконок платежных систем в разделе "Онлайн пополнение без комиссии"
     @Test
     @DisplayName("Check icons for pay Payment Section")
+    @Step
     public void checkIconsForPayPaymentSection() {
         String[] expectedIcons = {"Visa", "Verified By Visa", "MasterCard", "MasterCard Secure Code", "Белкарт"};
         assertTrue(mtsHomePage.areIconsDisplayed(expectedIcons));
@@ -61,6 +63,7 @@ public class MtsTest {
     //Проверка ссылки "Подробнее о сервисе"
     @Test
     @DisplayName("Check link about service")
+    @Step
     public void checkLinkAboutService() {
         mtsHomePage.clickMoreAboutService();
 
@@ -71,6 +74,7 @@ public class MtsTest {
     //Тест на проверку и заполнение полей в разделе "Онлайн пополнение без комиссии" с проверкой всплывающего окна
     @Test
     @DisplayName("Test Form Online Payment")
+    @Step
     public void testFormOnlinePayment() {
         mtsHomePage.fillOnlinePaymentForm("297777777", "100", "ivanov2000@gmail.com");
 
@@ -87,6 +91,7 @@ public class MtsTest {
     //Тест на проверку заполнения полей при выборе меню "Домашний интернет" в блоке "Онлайн пополнение без комиссии"
     @Test
     @DisplayName("Check placeholders for internet service fields")
+    @Step
     public void checkPlaceholdersForInternetService() {
         mtsHomePage.selectPaymentOption("Домашний интернет");
 
@@ -113,6 +118,7 @@ public class MtsTest {
     //Тест на проверку заполнения полей при выборе меню "Услуги связи" в блоке "Онлайн пополнение без комиссии"
     @Test
     @DisplayName("Check placeholders for connection service fields")
+    @Step
     public void checkPlaceholdersForConnectionService() {
         mtsHomePage.selectPaymentOption("Услуги связи");
 
@@ -139,6 +145,7 @@ public class MtsTest {
     //Тест на проверку заполнения полей при выборе меню "Рассрочка" в блоке "Онлайн пополнение без комиссии"
     @Test
     @DisplayName("Check placeholders for instalment service fields")
+    @Step
     public void checkPlaceholdersForInstalmentService() {
         // Select "Рассрочка"
         mtsHomePage.selectPaymentOption("Рассрочка");
@@ -167,6 +174,7 @@ public class MtsTest {
     //Тест на проверку заполнения полей при выборе меню "Рассрочка" в блоке "Онлайн пополнение без комиссии"
     @Test
     @DisplayName("Check placeholders for arrears service fields")
+    @Step
     public void checkPlaceholdersForArrearsService() {
         mtsHomePage.selectPaymentOption("Задолженность");
 
@@ -193,6 +201,7 @@ public class MtsTest {
     //Проверка содержания  всплывающего окна после заполнения всех полей
     @Test
     @DisplayName("Test Form Online Payment With Parameters")
+    @Step
     public void testFormOnlinePaymentWithParameters() {
         String phoneNumber = "297777777";
         String amount = "100";
